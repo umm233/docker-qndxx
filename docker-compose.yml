@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    container_name: qndxx
+    build: .
+    ports:
+      - 127.0.0.1:35555:8888
+    # volumes:
+    #   - ./FuckQNDXX:/app/FuckQNDXX
+    command: sh -c 'cd /app/FuckQNDXX && pip install -i https://mirrors.ustc.edu.cn/pypi/web/simple -r requirements.txt && python MainSever.py'
+    restart: always
